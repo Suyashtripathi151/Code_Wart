@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roundedcorner"
+    tools:context=".CreateStackActivity">
+
+
+    <View
+        android:id="@+id/createstackview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+        android:id="@+id/createstackimageView2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:paddingTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/readylogo" />
+
+
+    <Button
+        android:id="@+id/createstackbutton4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_baseline_menu_24"
+        android:backgroundTint="#1879D3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/createstackimgProfile"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#FAFAFA"
+        android:foregroundGravity="center_vertical|center"
+        android:src="@drawable/img_1"
+        app:civ_border_color="@color/white"
+        app:civ_border_overlay="true"
+        app:civ_border_width="6dp"
+        app:civ_circle_background_color="#CAC2C2"
+        app:layout_constraintBottom_toTopOf="@+id/createstacktextUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/createstackview"
+        app:layout_constraintTop_toTopOf="@+id/createstackview" />
+
+
+
+    <TextView
+        android:id="@+id/createstacktextUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Suyash Tripathi"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/createstackimgProfile"
+        app:layout_constraintStart_toStartOf="@+id/createstackimgProfile"
+        app:layout_constraintTop_toBottomOf="@+id/createstackimgProfile" />
+
+
+    <ScrollView
+        android:id="@+id/createstackscroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/createstacksubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createstacktextUsername">
+
+
+        <LinearLayout
+            android:id="@+id/lostlinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lostedittext">
+
+
+            <TextView
+                android:id="@+id/txterror"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Name of Error/Problem"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/losttextView3" />
+
+            <EditText
+                android:id="@+id/inperror"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#1879D3"
+                android:contentDescription="@string/enter_your_name"
+                android:ems="10"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/losttextview2" />
+
+            <TextView
+                android:id="@+id/txtide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Platform/IDE"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/losteditNameSignUp" />
+
+            <EditText
+                android:id="@+id/inpide"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#1879D3"
+                android:ems="10"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/losttextView4" />
+
+
+            <TextView
+                android:id="@+id/txtdesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Problem Description"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/losteditNameSignUp" />
+
+            <EditText
+                android:id="@+id/inpdesc"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:backgroundTint="#1879D3"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Write a detailed description about your problem in depth"
+                android:inputType="textLongMessage|textMultiLine"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/losttextView4" />
+
+            <TextView
+                android:id="@+id/txtsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="What you did to solve the problem ?"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/losteditNameSignUp" />
+
+            <EditText
+                android:id="@+id/inpsolution"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:backgroundTint="#1879D3"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="textLongMessage|textMultiLine"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/losttextView4" />
+
+            <TextView
+                android:id="@+id/txtsc2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select the tags"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/losteditNameSignUp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#6B1879D3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/stackview"
+                app:layout_constraintTop_toBottomOf="@+id/stacktextUsername">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/stackcheckBox2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="App Development" />
+
+                        <CheckBox
+                            android:id="@+id/stackcheckBox3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Web Development" />
+
+                        <CheckBox
+                            android:id="@+id/stackcheckBox4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="SQL" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/stackcheckBox22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="UI/UX" />
+
+                        <CheckBox
+                            android:id="@+id/stackcheckBox33"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Machine Learning" />
+
+                        <CheckBox
+                            android:id="@+id/stackcheckBox44"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cyber Secuirity" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/stackcheckBox222"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Data Science" />
+
+                        <CheckBox
+                            android:id="@+id/stackcheckBox333"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="IOT" />
+
+                        <CheckBox
+                            android:id="@+id/stackcheckBox444"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Others" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/createstacksubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#6B1879D3"
+        android:text="NEXT"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/createstackview"
+        app:layout_constraintEnd_toEndOf="@+id/createstackview"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

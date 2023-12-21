@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roundedcorner"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/profupdatebutton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#751879D3"
+        android:text="@string/update"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/profview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/profimageView2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:paddingTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/readylogo" />
+
+    <Button
+        android:id="@+id/profbutton4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_baseline_menu_24"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profimgProfile"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#FAFAFA"
+        android:foregroundGravity="center_vertical|center"
+        android:src="@drawable/img_1"
+        app:civ_border_color="@color/white"
+        app:civ_border_overlay="true"
+        app:civ_border_width="8dp"
+        app:civ_circle_background_color="#CAC2C2"
+        app:layout_constraintBottom_toTopOf="@+id/proftextUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/profview"
+        app:layout_constraintTop_toTopOf="@+id/profview" />
+
+    <TextView
+        android:id="@+id/proftextUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Suyash Tripathi"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/profimgProfile"
+        app:layout_constraintStart_toStartOf="@+id/profimgProfile"
+        app:layout_constraintTop_toBottomOf="@+id/profimgProfile" />
+
+    <ScrollView
+        android:id="@+id/profscrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/profupdatebutton"
+        app:layout_constraintEnd_toEndOf="@+id/profview"
+        app:layout_constraintStart_toStartOf="@+id/profview"
+        app:layout_constraintTop_toBottomOf="@+id/profinp_about">
+
+        <LinearLayout
+            android:id="@+id/proflinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profimgprofilepic2">
+
+
+            <TextView
+                android:id="@+id/proftextviewname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/name"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proftextView3" />
+
+            <EditText
+                android:id="@+id/profinp_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#1879D3"
+                android:contentDescription="@string/enter_your_name"
+                android:inputType="textEmailAddress"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proftextview2" />
+
+            <TextView
+                android:id="@+id/proftextviewphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/phone"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proftextView3" />
+
+            <EditText
+                android:id="@+id/profinp_phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#1879D3"
+                android:contentDescription="@string/input_your_value"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proftextView9" />
+
+            <TextView
+                android:id="@+id/proftextViewemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/email_id"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profeditNameSignUp" />
+
+            <EditText
+                android:id="@+id/profinp_email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#1879D3"
+                android:drawableRight="@drawable/ic_baseline_email_24"
+                android:drawableTint="#1879D3"
+                android:inputType="textEmailAddress"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proftextView4" />
+
+            <TextView
+                android:id="@+id/proftextdob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select DOB"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profeditNameSignUp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/profbuttondate"
+                    android:layout_width="7dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#751879D3"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/baseline_arrow_right_alt_24" />
+
+                <TextView
+                    android:id="@+id/proftextViewdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center|right"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="5dp"
+                    android:text="dd-mm-yyyy"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/proftextViewDepart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="LinkedIn Profile Url"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profeditNameSignUp" />
+
+            <EditText
+                android:id="@+id/profinp_linkedin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#1879D3"
+                android:contentDescription="@string/enter_your_name"
+                android:inputType="text|textUri"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proftextview2" />
+
+            <TextView
+                android:id="@+id/proftextViewDepart2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Github Profile Url"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profeditNameSignUp" />
+
+            <EditText
+                android:id="@+id/profinp_github"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#1879D3"
+                android:contentDescription="@string/enter_your_name"
+                android:inputType="textEmailAddress"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proftextview2" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/profinp_about"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#004E3B3B"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:maxLines="2"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/profview"
+        app:layout_constraintStart_toStartOf="@+id/profview"
+        app:layout_constraintTop_toBottomOf="@+id/proftextUsername" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

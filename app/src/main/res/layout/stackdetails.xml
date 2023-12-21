@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:backgroundTint="#00000000"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundedcorner"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/jobCompName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:text="RecyclerView: Inconsistency detected. Invalid item position "
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profimgProfile2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="20dp"
+                        android:backgroundTint="#FAFAFA"
+                        android:src="@drawable/img_1"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_overlay="true"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="#CAC2C2" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="SuyashTrpathi151"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="Posted on 07 Dec 2023"
+                        android:textSize="10sp"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/jobDeadline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:background="#1879D3"
+                    android:text="Android Studio, Figma. Firebase"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:contextClickable="true"
+                    android:minHeight="200dp"
+                    android:text="Our QA has detected a bug: when rotating the Android device (Droid Turbo), the following RecyclerView-related crash happened:  java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid item position 2(offset:2).state:3  To me, it looks like an internal error inside RecyclerView, as I can't think of any way of this being caused directly by our code...  Has anyone encountered this problem?  What would be the solution?  A brutal workaround could be perhaps to catch the exception when it happens and re-create the RecyclverView instance from scratch, to avoid getting left with a corrupted state.  But, if possible, I would like to understand the problem better (and perhaps fix it at its source), instead of masking it.  The bug is not easy to reproduce, but it is fatal when it happens.  The full stack-trace:  W/dalvikvm( 7546): threadid=1: thread exiting with uncaught exception (group=0x41987d40)     E/AndroidRuntime( 7546): FATAL EXCEPTION: main     E/AndroidRuntime( 7546): Process: com.oblong.mezzedroid, PID: 7546     E/AndroidRuntime( 7546): java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid item position 2(offset:2).state:3     E/AndroidRuntime( 7546):    at android.support.v7.widget.RecyclerView$Recycler.getViewForPosition(RecyclerView.java:3382)     E/AndroidRuntime( 7546):    at android.support.v7.widget.RecyclerView$Recycler.getViewForPosition(RecyclerView.java:3340)     E/AndroidRuntime( 7546):    at android.support.v7.widget.LinearLayoutManager$LayoutState.next(LinearLayoutManager.java:1810)     E/AndroidRuntime( 7546):    at android.support.v7.widget.LinearLayoutManager.layoutChunk(LinearLayoutManager.java:1306)     E/AndroidRuntime( 7546):    at android.support.v7.widget.LinearLayoutManager.fill(LinearLayoutManager.java:1269)     E/AndroidRuntime( 7546):    at android.support.v7.widget.LinearLayoutManager.onLayoutChildren(LinearLayoutManager.java:523)     E/AndroidRuntime( 7546):    at org.liboid.recycler_view.RecyclerViewContainer$LiLinearLayoutManager.onLayoutChildren(RecyclerViewContainer.java:179)     E/AndroidRuntime( 7546):    at android.support.v7.widget.RecyclerView.dispatchLayout(RecyclerView.java:1942)     E/AndroidRuntime( 7546):    at android.support.v7.widget.RecyclerView.onLayout(RecyclerView.java:2237)     E/AndroidRuntime( 7546):    at org.liboid.recycler_view.LiRecyclerView.onLayout(LiRecyclerView.java:30)     E/AndroidRuntime( 7546):    at android.view.View.layout(View.java:14946)     E/AndroidRuntime( 7546):    at android.view.ViewGroup.layout(ViewGroup.java:4651)     E/AndroidRuntime( 7546):    at android.widget.FrameLayout.layoutChildren(FrameLayout.java:453)     E/AndroidRuntime( 7546):    at android.widget.FrameLayout.onLayout(FrameLayout.java:388)     E/AndroidRuntime( 7546):    at android.view.View.layout(View.java:14946)     E/AndroidRuntime( 7546):    at android.view.ViewGroup.layout(ViewGroup.java:4651)     E/AndroidRuntime( 7546):    at android.widget.FrameLayout.layoutChildren(FrameLayout.java:453)     E/AndroidRuntime( 7546):    at android.widget.FrameLayout.onLayout(FrameLayout.java:388)     E/AndroidRuntime( 7546):    at android.view.View.layout(View.java:14946)     E/AndroidRuntime( 7546):    at android.view.ViewGroup.layout(ViewGroup.java:4651)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.setChildFrame(LinearLayout.java:1671)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.layoutVertical(LinearLayout.java:1525)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.onLayout(LinearLayout.java:1434)     E/AndroidRuntime( 7546):    at com.oblong.mezzedroid.workspace.content.bins.BinsContainerLayout.onLayout(BinsContainerLayout.java:22)     E/AndroidRuntime( 7546):    at android.view.View.layout(View.java:14946)     E/AndroidRuntime( 7546):    at android.view.ViewGroup.layout(ViewGroup.java:4651)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.setChildFrame(LinearLayout.java:1671)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.layoutVertical(LinearLayout.java:1525)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.onLayout(LinearLayout.java:1434)     E/AndroidRuntime( 7546):    at android.view.View.layout(View.java:14946)"
+                    android:textAlignment="textStart"
+                    android:textIsSelectable="true" />
+
+                <TextView
+                    android:id="@+id/jobCompName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:text="Possible Solution"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:text="Our QA has detected a bug: when rotating the Android device (Droid Turbo), the following RecyclerView-related crash happened:  java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid item position 2(offset:2).state:3  To me, it looks like an internal error inside RecyclerView, as I can't think of any way of this being caused directly by our code...  Has anyone encountered this problem?  What would be the solution?  A brutal workaround could be perhaps to catch the exception when it happens and re-create the RecyclverView instance from scratch, to avoid getting left with a corrupted state.  But, if possible, I would like to understand the problem better (and perhaps fix it at its source), instead of masking it.  The bug is not easy to reproduce, but it is fatal when it happens.  The full stack-trace:  W/dalvikvm( 7546): threadid=1: thread exiting with uncaught exception (group=0x41987d40)     E/AndroidRuntime( 7546): FATAL EXCEPTION: main     E/AndroidRuntime( 7546): Process: com.oblong.mezzedroid, PID: 7546     E/AndroidRuntime( 7546): java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid item position 2(offset:2).state:3     E/AndroidRuntime( 7546):    at android.support.v7.widget.RecyclerView$Recycler.getViewForPosition(RecyclerView.java:3382)     E/AndroidRuntime( 7546):    at android.support.v7.widget.RecyclerView$Recycler.getViewForPosition(RecyclerView.java:3340)     E/AndroidRuntime( 7546):    at android.support.v7.widget.LinearLayoutManager$LayoutState.next(LinearLayoutManager.java:1810)     E/AndroidRuntime( 7546):    at android.support.v7.widget.LinearLayoutManager.layoutChunk(LinearLayoutManager.java:1306)     E/AndroidRuntime( 7546):    at android.support.v7.widget.LinearLayoutManager.fill(LinearLayoutManager.java:1269)     E/AndroidRuntime( 7546):    at android.support.v7.widget.LinearLayoutManager.onLayoutChildren(LinearLayoutManager.java:523)     E/AndroidRuntime( 7546):    at org.liboid.recycler_view.RecyclerViewContainer$LiLinearLayoutManager.onLayoutChildren(RecyclerViewContainer.java:179)     E/AndroidRuntime( 7546):    at android.support.v7.widget.RecyclerView.dispatchLayout(RecyclerView.java:1942)     E/AndroidRuntime( 7546):    at android.support.v7.widget.RecyclerView.onLayout(RecyclerView.java:2237)     E/AndroidRuntime( 7546):    at org.liboid.recycler_view.LiRecyclerView.onLayout(LiRecyclerView.java:30)     E/AndroidRuntime( 7546):    at android.view.View.layout(View.java:14946)     E/AndroidRuntime( 7546):    at android.view.ViewGroup.layout(ViewGroup.java:4651)     E/AndroidRuntime( 7546):    at android.widget.FrameLayout.layoutChildren(FrameLayout.java:453)     E/AndroidRuntime( 7546):    at android.widget.FrameLayout.onLayout(FrameLayout.java:388)     E/AndroidRuntime( 7546):    at android.view.View.layout(View.java:14946)     E/AndroidRuntime( 7546):    at android.view.ViewGroup.layout(ViewGroup.java:4651)     E/AndroidRuntime( 7546):    at android.widget.FrameLayout.layoutChildren(FrameLayout.java:453)     E/AndroidRuntime( 7546):    at android.widget.FrameLayout.onLayout(FrameLayout.java:388)     E/AndroidRuntime( 7546):    at android.view.View.layout(View.java:14946)     E/AndroidRuntime( 7546):    at android.view.ViewGroup.layout(ViewGroup.java:4651)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.setChildFrame(LinearLayout.java:1671)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.layoutVertical(LinearLayout.java:1525)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.onLayout(LinearLayout.java:1434)     E/AndroidRuntime( 7546):    at com.oblong.mezzedroid.workspace.content.bins.BinsContainerLayout.onLayout(BinsContainerLayout.java:22)     E/AndroidRuntime( 7546):    at android.view.View.layout(View.java:14946)     E/AndroidRuntime( 7546):    at android.view.ViewGroup.layout(ViewGroup.java:4651)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.setChildFrame(LinearLayout.java:1671)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.layoutVertical(LinearLayout.java:1525)     E/AndroidRuntime( 7546):    at android.widget.LinearLayout.onLayout(LinearLayout.java:1434)     E/AndroidRuntime( 7546):    at android.view.View.layout(View.java:14946)"
+                    android:textAlignment="textStart" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="#000000"
+                    android:backgroundTint="#000000"
+                    android:text="0 UPVOTES"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="UPVOTE"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/jobCompName3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:text="Submit Your Suggestion"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inpdesc2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#1879D3"
+                    android:ems="10"
+                    android:gravity="start"
+                    android:hint="Write a detailed suggestion which can resolve this problem according to you"
+                    android:inputType="textLongMessage|textMultiLine"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/losttextView4" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="@color/black"
+                    android:backgroundTint="#1879D3"
+                    android:text="SUBMIT" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+
+</RelativeLayout>

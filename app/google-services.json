@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "562433985075",
+    "firebase_url": "https://code-wart-default-rtdb.firebaseio.com",
+    "project_id": "code-wart",
+    "storage_bucket": "code-wart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562433985075:android:4cfacb86c01a7d33ec3146",
+        "android_client_info": {
+          "package_name": "com.example.codewart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562433985075-e0m4gn0pf0lc1ngcfl32j8evtr10roi9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPjZ_xczews_vfDdFPy8lLA1at-b00nF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562433985075-e0m4gn0pf0lc1ngcfl32j8evtr10roi9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
